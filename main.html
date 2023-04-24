@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+   <!-- Header contains all metadata-->
+   <head>
+      <link rel="stylesheet" href="style.css">
+   </head>
+
+   <!-- Contains Main Elements of the Webpage-->
+<body>
+
+   <!-- Nav Bar -->
+   <div class="navbar">
+      <a>____</a>
+      <a class="menu" href="./main.html">Home</a>
+      <a href="./popular-items.html">Popular Items</a>
+      <a href="./about-us.html">About Us</a>
+      <a href="https://www.yelp.com/biz/fika-fika-arcadia-2" target="_blank">Yelp</a>
+   </div>
+
+   <!-- Logo -->
+   <img src="images/logo.png" class="logo">
+   
+   <!-- Images -->
+   <img src="images/main-picture.jpg" class="main-pic">
+   <img src="images/main-picture-2.jpg" class="main-pic-2">
+
+   <!-- Title Description-->
+   <div class="title">Fika Fika</div>
+   <div class="motto">Bringing You the </div> 
+   <div class="motto-2">Refreshments that You <strong>Love</strong></div> 
+   <div class="motto-3">Bringing You the </div> 
+   <div class="motto-4">Refreshments that You <strong>Deserve</strong></div> 
+
+   <!-- Store Hours -->
+   <div class="store-hours-title"><b>Store Hours</b></div>
+   <div class="store-hours">Open Everyday From <br> 7:00 AM - 7:00 PM!</div>
+
+   <p id= "availability" class= "availability"></p>
+   <button class= "check-hours-btn" onclick = "getAvailability()">Check Our Hours!</button>
+   <script>
+      function getAvailability()
+      {
+         var date = new Date();
+         var hour = date.getHours();
+
+         if (hour >= 7 && hour <= 19) 
+         {
+            document.getElementById("availability").innerHTML = "<q>We are open at this time!</q>";
+         } 
+         else 
+         {
+            document.getElementById("availability").innerHTML = "<q>We are closed, <br> please check again <br> later!</q>";
+         }
+      }
+   </script> 
+
+   <!-- Disclaimer -->
+   <h3>*This is an Unofficial Website </h3>
+</body>
+</html>
