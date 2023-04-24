@@ -44,8 +44,9 @@
       {
          var date = new Date();
          var hour = date.getHours();
+         var minutes = date.getMinutes();
 
-         if (hour >= 7 && hour <= 19) 
+         if (hour > 7 && hour < 19) 
          {
             document.getElementById("availability").innerHTML = "<q>We are open at this time!</q>";
          } 
