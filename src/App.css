@@ -1,0 +1,65 @@
+
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f0e7e7;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  transition: color 0.2s;
+}
+
+/* Pages - stacked sections with scroll */
+.page {
+  margin: 0 8rem;
+  min-height: 40vh;
+}
+
+
+.home-splash-content-text {
+  min-width: 0;
+}
+
+.pfp-img {
+  width: 250px;
+  border-radius: 50%;
+  border: 5px solid rgba(94, 87, 115, 0.932);
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
