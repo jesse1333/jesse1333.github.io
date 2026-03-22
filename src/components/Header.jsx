@@ -1,13 +1,17 @@
-export default function Header() {
+import { forwardRef } from 'react';
+
+const Header = forwardRef(function Header(_, ref) {
   return (
-    <header className="header">
-      <a href="#home" className="logo">JT</a>
+    <header ref={ref} className="header">
+      <span className="logo">JT</span>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#about-me">About Me</a>
         <a href="#projects">Projects</a>
+        <a href="#experiences">Experiences</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
   );
-}
+});
+
+export default Header;

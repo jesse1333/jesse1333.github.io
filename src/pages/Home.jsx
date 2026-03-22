@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import pfp from '../assets/pfp.png';
 import github from '../assets/github.svg';
 import linkedin from '../assets/linkedin.svg';
@@ -5,46 +6,98 @@ import email from '../assets/google.svg';
 import resume from '../assets/resume.svg';
 
 export default function Home() {
+  const [socialOpen, setSocialOpen] = useState(false);
+
   return (
     <section id="home" className="page home">
 
-      <div className="home-splash-content" style={{display: 'flex', flexDirection: 'row'}}>
-        {/* Main Splash Screen Text */}
-        <div className="home-splash-content-text" style={{display: 'flex', flexDirection: 'column'}}>
-          <h1>Hi, I'm Jesse.</h1>
-          <p>I'm a current senior at the University of Southern California studying Computer Science.</p>
-          <p>Here's a little bit about some of the work I've done: </p>
+      <div className="home-splash-content">
+        <div className="home-splash-content-text">
+          <h1 className="home-splash-animate home-splash-animate--1">Hi, I'm <span style={{color: "#F05D5E"}}>Jesse</span>.</h1>
+          <p className="home-splash-animate home-splash-animate--2">
+            I build <br /> full-stack applications.
+          </p>
         </div>
 
-        <div style={{display: 'flex', flexDirection: 'column', gap: '10px', marginLeft: '100px', marginTop: '50px' }}>
-          {/* Profile Picture */}
-          <div style={{ flexShrink: 0}}>
-            <img className="pfp-img" src={pfp} alt="Profile" />
-          </div>
+        <div className="home-splash-aside">
+          <button
+            type="button"
+            className="pfp-wrap home-splash-animate home-splash-animate--3"
+            onClick={() => setSocialOpen((open) => !open)}
+            aria-expanded={socialOpen}
+            aria-controls="home-social-links"
+            aria-label={socialOpen ? 'Hide social links' : 'Show social links'}
+          >
+            <img className="pfp-img" src={pfp} alt="" draggable={false} aria-hidden="true" />
+          </button>
 
-          {/* Group of Links */}
-          <div className="home-splash-content-links" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '8px'}}>
-            <button className="icon-button" onClick={() => window.open('https://github.com/jesse1333', '_blank')}>
-              <img style={{width: 25}} src={github} alt="GitHub" />
+          <div className="home-social-region">
+            <p
+              className={`home-social-hint ${socialOpen ? 'home-social-hint--hidden' : 'home-social-hint--visible'}`}
+              aria-hidden="true"
+            >
+              Say hi.
+            </p>
+            <div
+              id="home-social-links"
+              className={`home-splash-content-links ${socialOpen ? 'home-social-links--open' : 'home-social-links--closed'}`}
+              aria-hidden={!socialOpen}
+            >
+            <button
+              type="button"
+              className="icon-button home-social-button"
+              aria-label="Open GitHub profile"
+              tabIndex={socialOpen ? undefined : -1}
+              onClick={() => window.open('https://github.com/jesse1333', '_blank')}
+            >
+              <img src={github} alt="" aria-hidden="true" draggable={false} />
             </button>
-            <button className="icon-button" onClick={() => window.open('https://www.linkedin.com/in/jesse-tzo', '_blank')}>
-              <img style={{width: 25}} src={linkedin} alt="LinkedIn" />
+            <button
+              type="button"
+              className="icon-button home-social-button"
+              aria-label="Open LinkedIn profile"
+              tabIndex={socialOpen ? undefined : -1}
+              onClick={() => window.open('https://www.linkedin.com/in/jesse-tzo', '_blank')}
+            >
+              <img src={linkedin} alt="" aria-hidden="true" draggable={false} />
             </button>
-
-            <button className="icon-button" onClick={() => window.location.href = 'mailto:tzojesse@gmail.com'}>
-              <img style={{width: 25}} src={email} alt="Email" />
+            <button
+              type="button"
+              className="icon-button home-social-button"
+              aria-label="Send email"
+              tabIndex={socialOpen ? undefined : -1}
+              onClick={() => (window.location.href = 'mailto:tzojesse@gmail.com')}
+            >
+              <img src={email} alt="" aria-hidden="true" draggable={false} />
             </button>
-
-            
-
-            <button className="icon-button" onClick={() => window.open('https://drive.google.com/file/d/1234567890/view?usp=sharing', '_blank')}>
-              <img style={{width: 25}} src={resume} alt="Resume" />
+            <button
+              type="button"
+              className="icon-button home-social-button"
+              aria-label="Open resume"
+              tabIndex={socialOpen ? undefined : -1}
+              onClick={() => window.open('https://drive.google.com/file/d/1yW8mey11HTEaAMGkkS9Z92zqzsGh5NLP/view?usp=sharing', '_blank')}
+            >
+              <img src={resume} alt="" aria-hidden="true" draggable={false} />
             </button>
+            </div>
           </div>
         </div>
       </div>
 
-      
+      <div className="home-scroll-hint-wrap home-scroll-hint-wrap--animate">
+        <a
+          href="#about-me"
+          className="home-scroll-hint"
+          aria-label="Scroll to About me"
+          draggable={false}
+          onDragStart={(e) => e.preventDefault()}
+        >
+          <span className="home-scroll-hint__label">About me</span>
+          <span className="home-scroll-hint__chevron-wrap" aria-hidden="true">
+            <span className="home-scroll-hint__chevron" />
+          </span>
+        </a>
+      </div>
     </section>
   );
 }
