@@ -15,7 +15,7 @@ export default function Home() {
         <div className="home-splash-content-text">
           <h1 className="home-splash-animate home-splash-animate--1">Hi, I'm <span style={{color: "#F05D5E"}}>Jesse</span>.</h1>
           <p className="home-splash-animate home-splash-animate--2">
-            I build <br /> full-stack applications.
+            I write full-stack systems for <i>real-world</i> use.
           </p>
         </div>
 

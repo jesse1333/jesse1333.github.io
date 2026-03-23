@@ -1,17 +1,18 @@
 import SectionScrollHint from "../components/SectionScrollHint";
 import Project from "../components/Project";
+import vetrailImg from "../assets/project-demos/vetrail.png";
 import crunchyRollImg from "../assets/project-demos/crunchy-roll.png";
 import habitHatchersImg from "../assets/project-demos/habit-hatchers.png";
 
 export default function Projects() {
   const projects = [
     {
-      image: crunchyRollImg,
+      image: vetrailImg,
       title: "Vetrail",
       description: 
         "Vetrail is a web application that allows you to track your veterinary appointments and medications.",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      codeUrl: "https://github.com/jesse1333/Habit-Hatchers",
+      technologies: ["React", "Node.js", "Express", "PostgreSQL"],
+      codeUrl: "https://vetrail.app",
       demoUrl: null,
     },
     {
@@ -32,7 +33,6 @@ export default function Projects() {
       codeUrl: "https://github.com/jesse1333/Habit-Hatchers",
       demoUrl: null,
     },
-    
   ];
 
   return (

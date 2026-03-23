@@ -17,6 +17,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Slightly larger base (~17.3px from typical 16px); scales all rem-based type in App.css */
+  font-size: 108%;
 }
 
 :root {
@@ -24,7 +26,6 @@ html {
   line-height: 1.5;
   font-weight: 400;
 
-  /* Links — one place to tweak base + hover sitewide */
   --link-color: #3581b8;
   --link-hover: #256699;
 
