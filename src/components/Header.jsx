@@ -6,7 +6,7 @@ const Header = forwardRef(function Header(_, ref) {
       <span className="logo">JT</span>
       <nav>
         <a href="#about-me">About Me</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Work</a>
         <a href="#experiences">Experiences</a>
         <a href="#contact">Contact</a>
       </nav>

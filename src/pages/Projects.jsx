@@ -41,7 +41,7 @@ export default function Projects() {
       className="page projects page-viewport-min page-viewport-min--scroll-hint"
     >
       <div className="projects-inner">
-        <h1>Projects</h1>
+        <h1>Featured Work</h1>
         <div className="projects-grid">
           {projects.map((project) => (
             <Project key={project.title} {...project} />
