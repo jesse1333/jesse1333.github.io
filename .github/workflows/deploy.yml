@@ -33,6 +33,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Validate built entrypoints
+        run: |
+          test -f dist/index.html
+          if grep -q 'src="/src/main.jsx"' dist/index.html; then
+            echo "Error: dist/index.html still points to /src/main.jsx"
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
