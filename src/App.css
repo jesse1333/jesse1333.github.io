@@ -597,6 +597,7 @@ button.pfp-wrap:focus-visible {
 .project-card {
   position: relative;
   background: #fff;
+  color: #1f2937;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -627,6 +628,7 @@ button.pfp-wrap:focus-visible {
 .project-card__title {
   font-size: 1.05rem;
   font-weight: 700;
+  color: #111827;
   margin: 0.85rem 1.05rem 0.35rem;
 }
 
