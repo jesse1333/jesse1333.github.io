@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -138,22 +138,6 @@
 .main > section.page:nth-child(even) {
   background-color: #292f36;
   color: rgba(241, 245, 249, 0.94);
-}
-
-@media (prefers-color-scheme: dark) {
-  .layout {
-    background-color: #242424;
-  }
-
-  .main > section.page:nth-child(odd) {
-    background-color: #242424;
-    color: rgba(255, 255, 255, 0.87);
-  }
-
-  .main > section.page:nth-child(even) {
-    background-color: #292f36;
-    color: rgba(241, 245, 249, 0.94);
-  }
 }
 
 .page.home {
