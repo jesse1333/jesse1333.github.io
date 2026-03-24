@@ -152,9 +152,9 @@ export default function About() {
       </div>
 
       <SectionScrollHint
-        href="#projects"
-        label="Projects"
-        ariaLabel="Scroll to Projects"
+        href="#featured-work"
+        label="Featured Work"
+        ariaLabel="Scroll to Featured Work"
       />
     </section>
   );

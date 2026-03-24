@@ -5,7 +5,7 @@ import crunchyRollImg from "../assets/project-demos/crunchy-roll.png";
 import habitHatchersImg from "../assets/project-demos/habit-hatchers.png";
 
 export default function Projects() {
-  const projects = [
+  const featuredWorkItems = [
     {
       image: vetrailImg,
       title: "Vetrail",
@@ -37,13 +37,15 @@ export default function Projects() {
 
   return (
     <section
-      id="projects"
+      id="featured-work"
       className="page projects page-viewport-min page-viewport-min--scroll-hint"
     >
+      {/* Keep old anchor for navbar compatibility while moving to featured-work URLs. */}
+      <span id="projects" aria-hidden="true" />
       <div className="projects-inner">
         <h1>Featured Work</h1>
         <div className="projects-grid">
-          {projects.map((project) => (
+          {featuredWorkItems.map((project) => (
             <Project key={project.title} {...project} />
           ))}
         </div>
