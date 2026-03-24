@@ -45,14 +45,17 @@ const TECH_STACK = [
 const personalIntro = (
   <>
     <p className="about-lead">
-      Aside from coding, I also love taking photos of nature! Here are some of my favorites:
+      I also love taking photos of nature! Here are some of my favorites:
     </p>
 
 
     <div className="about-photo-grid">
 
-      Photos..
+      Add Photos..
+
     </div>
+
+    <br/>
 
 
     <p className="about-lead">
@@ -61,7 +64,7 @@ const personalIntro = (
 
     <p> Add stuff about music here...</p>
 
-    <p className="about-lead">Lastly, I hanging out with my family and friends!</p>
+    <p className="about-lead">Lastly, I love hanging out with my family and friends!</p>
   </>
 );
 
@@ -126,7 +129,7 @@ export default function About() {
           id="about-heading"
           className="about-heading about-reveal-item"
         >
-          {introType ? 'A little bit about me…' : 'More about me!'}
+          {introType ? 'A little bit about me…' : 'Aside from coding…'}
         </h1>
         <div className="about-header-row__switch">
           <Switch
@@ -137,8 +140,8 @@ export default function About() {
             duration={400}
             trackColors={ABOUT_SWITCH_TRACK}
           />
-          <p id={labelId} className="about-intro-toggle__label">
-            {introType ? 'More about me!' : 'A little about me...'}
+          <p id={labelId} style={{marginTop: '0.5rem'}} className="about-intro-toggle__label">
+            {introType ? 'Aside from coding…' : 'A little about me...'}
           </p>
         </div>
       </div>
