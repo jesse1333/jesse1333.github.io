@@ -925,7 +925,7 @@ button.pfp-wrap:focus-visible {
 .about-usc-link__preview {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 0.4rem);
+  top: calc(100% + 0.4rem);
   transform: translateX(-50%);
   width: min(18rem, 78vw);
   max-height: 11rem;

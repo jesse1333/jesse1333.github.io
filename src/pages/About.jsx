@@ -45,15 +45,23 @@ const TECH_STACK = [
 const personalIntro = (
   <>
     <p className="about-lead">
-      I&apos;m a final-year Computer Science student at <AboutUscLink />. I work across the stack—React and modern
-      front ends, Node and Express services, and data layers like MongoDB—focusing on APIs, performance,
-      and interfaces that stay maintainable as projects grow.
+      Aside from coding, I also love taking photos of nature! Here are some of my favorites:
     </p>
-    <p className="about-body">
-      I care about clear architecture, sensible abstractions, and shipping features that scale. Most of
-      my projects blend product thinking with solid engineering: from extensions and apps to full-stack
-      tools people use day to day.
+
+
+    <div className="about-photo-grid">
+
+      Photos..
+    </div>
+
+
+    <p className="about-lead">
+      I'm also huge fan of music, playing piano/guitar and writing songs. Some of my favorite artists are:
     </p>
+
+    <p> Add stuff about music here...</p>
+
+    <p className="about-lead">Lastly, I hanging out with my family and friends!</p>
   </>
 );
 

@@ -1,7 +1,8 @@
 import githubIcon from "../assets/github-cat.svg";
+import externalLinkIcon from "../assets/external-link.svg";
 import linkIcon from "../assets/link.svg";
 
-export default function Project({ image, title, description, technologies = [], codeUrl, demoUrl }) {
+export default function Project({ image, title, description, technologies = [], codeUrl, websiteUrl, demoUrl }) {
   return (
     <article className="project-card">
       {image && (
@@ -20,8 +21,14 @@ export default function Project({ image, title, description, technologies = [], 
           ))}
         </div>
       )}
-      {(codeUrl || demoUrl) && (
+      {(websiteUrl || codeUrl || demoUrl) && (
         <div className="project-card__links">
+          {websiteUrl && (
+            <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="project-card__link">
+              <img src={externalLinkIcon} alt="" className="project-card__link-icon" aria-hidden />
+              Website
+            </a>
+          )}
           {codeUrl && (
             <a href={codeUrl} target="_blank" rel="noopener noreferrer" className="project-card__link">
               <img src={githubIcon} alt="" className="project-card__link-icon" aria-hidden />

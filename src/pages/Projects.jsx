@@ -12,7 +12,7 @@ export default function Projects() {
       description: 
         "Vetrail is a web application that allows you to track your veterinary appointments and medications.",
       technologies: ["React", "Node.js", "Express", "PostgreSQL"],
-      codeUrl: "https://vetrail.app",
+      websiteUrl: "https://vetrail.app",
       demoUrl: null,
     },
     {
